@@ -65,7 +65,7 @@
 
             HLSLPROGRAM
             #pragma vertex vert
-            #pragma fragment  frag
+            #pragma fragment frag
 
             v2f vert(a2v i)
             {
@@ -74,7 +74,7 @@
                 o.texcoord.zw = TRANSFORM_TEX(i.texcoord, _NormalTex);
                 o.positionCS = TransformObjectToHClip(i.positionOS);
                 o.normalWS.xyz = normalize(TransformObjectToWorldNormal(i.normalOS));
-                o.tangentWS.xyz = normalize(TransformObjectToWorld(i.tangentOS));
+                o.tangentWS.xyz = normalize(TransformObjectToWorldDir(i.tangentOS));
                 o.BtangentWS.xyz = cross(o.normalWS.xyz, o.tangentWS.xyz) * i.tangentOS.w * unity_WorldTransformParams.w;
                 //这里乘一个unity_WorldTransformParams.w是为判断是否使用了奇数相反的缩放
                 float3 positionWS = TransformObjectToWorld(i.positionOS);

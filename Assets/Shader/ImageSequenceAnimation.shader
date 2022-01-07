@@ -3,7 +3,7 @@ Shader "URP/ImageSequenceAnimation"
 {
     Properties
     {
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _MainTex ("MainTex", 2D) = "white" {}
         _BaseColor ("BaseColor", Color) = (1,1,1,1)
         _Sheet("Sheet",Vector) = (1,1,1,1)
         _FrameRate("FrameRate", float) = 25
@@ -26,7 +26,7 @@ Shader "URP/ImageSequenceAnimation"
         float4 _MainTex_ST;
         half4 _BaseColor;
         half4 _Sheet;
-        half4 _FrameRate;
+        float _FrameRate;
         CBUFFER_END
 
         TEXTURE2D(_MainTex);

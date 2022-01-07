@@ -56,12 +56,10 @@ Shader "URP/Billboard"
             Blend SrcAlpha OneMinusSrcAlpha
 
             HLSLPROGRAM
+            
             #pragma vertex VERT
-
             #pragma fragment FRAG
-
-            #pragma shader_feature_local _Z_STAGE_LOCK_Z
-
+            
             v2f VERT(a2v i)
             {
                 v2f o;

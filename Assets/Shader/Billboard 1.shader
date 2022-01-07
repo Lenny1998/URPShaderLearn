@@ -21,8 +21,6 @@ Shader "URP/Billboard1"
         HLSLINCLUDE
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
-        #pragma vertex vert
-        #pragma fragment frag
 
         TEXTURE2D(_MainTex);
         SAMPLER(sampler_MainTex);
@@ -58,6 +56,9 @@ Shader "URP/Billboard1"
             Cull Off
 
             HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
             v2f vert(a2v v)
             {
                 v2f o;

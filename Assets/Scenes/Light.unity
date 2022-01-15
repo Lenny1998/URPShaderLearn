@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 202844093}
   - component: {fileID: 202844092}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Lambert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 2077076359}
   - component: {fileID: 2077076358}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Diffuse Pixel-Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +543,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9cddeb4c25ed4edd95d017ad2875114, type: 2}
+  - {fileID: 2100000, guid: a2212c4cb718f47b7af9af770fb0a3f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

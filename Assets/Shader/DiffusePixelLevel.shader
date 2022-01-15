@@ -1,5 +1,5 @@
-//逐顶点光照
-Shader "URP/Diffuse Vertex-Level"
+//逐像素光照
+Shader "URP/Diffuse Pixel-Level"
 {
     Properties
     {
@@ -30,7 +30,7 @@ Shader "URP/Diffuse Vertex-Level"
         struct v2f
         {
             float4 positionCS:SV_POSITION;
-            float3 color:COLOR;
+            float3 normalCS:TEXCOORD0;
         };
         ENDHLSL
 
@@ -49,19 +49,21 @@ Shader "URP/Diffuse Vertex-Level"
             {
                 v2f o;
                 o.positionCS = TransformObjectToHClip(v.positionOS);
-                float3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
-                float3 worldNormal = TransformObjectToWorldNormal(v.normalOS, true);
-                Light mainLight = GetMainLight();
-                float3 worldLight = normalize(mainLight.direction);
-                float3 diffuse = mainLight.color * _Diffuse.rgb * saturate(dot(worldNormal, worldLight));
+                o.normalCS = TransformObjectToWorldNormal(v.normalOS);
 
-                o.color = ambient + diffuse;
                 return o;
             }
 
             real4 FRAG(v2f i):SV_TARGET
             {
-                return float4(i.color, 1.0);
+                float3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
+                float3 worldNormal = TransformObjectToWorldNormal(i.normalCS);
+                Light mainLight = GetMainLight();
+                float3 worldLight = normalize(mainLight.direction);
+                float3 diffuse = mainLight.color * _Diffuse.rgb * saturate(dot(worldNormal, worldLight));
+
+                float3 color = ambient + diffuse;
+                return float4(color, 1.0);
             }
             ENDHLSL
         }

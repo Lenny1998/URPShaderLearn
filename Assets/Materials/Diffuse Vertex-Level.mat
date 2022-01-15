@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Diffuse_Vertex_Level
+  m_Name: Diffuse Vertex-Level
   m_Shader: {fileID: 4800000, guid: 9e518875626e40688b30d3fcb08c6f07, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

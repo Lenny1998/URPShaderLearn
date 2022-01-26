@@ -69,7 +69,10 @@
 
                 float3 diffuse = mainLight.color * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
 
-                float3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
+                //这两行一样
+                //float3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
+                float3 viewDir = normalize(GetWorldSpaceViewDir(i.worldPos));
+
                 float3 halfDir = normalize(worldLightDir + viewDir);
 
                 float3 specular = mainLight.color.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);

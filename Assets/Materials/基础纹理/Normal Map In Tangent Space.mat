@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Normal
-  m_Shader: {fileID: 4800000, guid: 694103eefb9ef4c569341878ea90b3cb, type: 3}
+  m_Name: Normal Map In Tangent Space
+  m_Shader: {fileID: 4800000, guid: c534fac70c6dc4fcc8dd69571036c0d2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,18 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0df7a0b61c9dfa6408ae01459c10ffec, type: 3}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 62ea63551f14847d18f8f258f74e14d8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: 9d6a060d595674a7dbe1d5ac3a5f127f, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d938a66d993e948deaed0109b1217675, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _NormalScale: 1
-    - _SpecularRange: 53.3
+    - _BumpScale: 0.45
+    - _Gloss: 20
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

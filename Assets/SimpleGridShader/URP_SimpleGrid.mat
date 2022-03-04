@@ -23,14 +23,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MyArr:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _GridSize: 10
+    - _GridSize: 13
     - _LineSize: 0.05
     - _SelectCell: 1
-    - _SelectedCellX: 0
+    - _SelectedCellX: 2
+    - _SelectedCellX2: 4
     - _SelectedCellY: 0
+    - _SelectedCellY2: 8
     m_Colors:
-    - _CellColor: {r: 0.4292453, g: 1, b: 0.43704477, a: 1}
+    - _CellColor: {r: 0.42924526, g: 1, b: 0.43704474, a: 1}
     - _LineColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelectedColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
